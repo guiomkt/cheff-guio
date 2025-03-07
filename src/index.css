@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  
+  /* ChefGuio cores da marca */
+  --primary: 358 73% 46%; /* R 202, G 33, B 39 */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  
+  --muted: 358 5% 94%; /* Variação leve do vermelho primário para backgrounds suaves */
+  --muted-foreground: 240 3.8% 46.1%;
+  
+  --accent: 349 6% 94%; /* R 241, G 237, B 238 */
+  --accent-foreground: 356 26% 8%; /* R 27, G 14, B 16 */
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 358 10% 90%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 358 73% 46%; /* Mesma cor do primário */
+  
+  --radius: 0.5rem;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 356 26% 8%; /* Mesma cor do accent-foreground */
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+}
+
+.dark {
+  --background: 356 26% 8%; /* R 27, G 14, B 16 */
+  --foreground: 0 0% 98%;
+  
+  --primary: 358 73% 46%; /* R 202, G 33, B 39 */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  
+  --muted: 356 20% 15%;
+  --muted-foreground: 240 5% 64.9%;
+  
+  --accent: 356 14% 20%;
+  --accent-foreground: 0 0% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 356 14% 30%;
+  --input: 356 14% 30%;
+  --ring: 358 73% 46%; /* Mesma cor do primário */
+  
+  --card: 356 26% 10%; /* Versão mais escura para cards */
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 356 26% 8%;
+  --popover-foreground: 0 0% 98%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  /* Estilos personalizados adicionais */
+  .chefguio-sidebar {
+    @apply bg-accent text-accent-foreground;
+  }
+  
+  .chefguio-header {
+    @apply bg-background border-b;
+  }
+}
