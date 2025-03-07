@@ -13,7 +13,6 @@ export function Onboarding() {
   const { onboardingStatus } = useAuth()
   const [allowStepClick, setAllowStepClick] = useState(true)
 
-  console.log(currentStep)
   // Sincronizar o passo atual com o status do onboarding do usuário
   useEffect(() => {
     if (onboardingStatus && currentStep === 1 && onboardingStatus.currentStep > 1) {
